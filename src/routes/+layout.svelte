@@ -12,7 +12,7 @@
 	<svelte:fragment slot="header">
 		<AppBar>
 			<svelte:fragment slot="lead">
-				<a href="/">Jack's Personal Page</a>
+				<a href="/">Jack's Page</a>
 			</svelte:fragment>
 			
 			<svelte:fragment slot="default">
@@ -21,9 +21,6 @@
 						<a href="blog">Blog</a>
 						<a href="new-post">Create Post</a>
 					</div>
-
-				
-				
 				
 			</svelte:fragment>
 			
