@@ -13,7 +13,7 @@ export const actions: Actions = {
     createArticle: async ({ request }) => {
         const { title, content } = Object.fromEntries(await request.formData()) as { 
             title: string,
-            content: string,
+            content: string
         }
 
         try {
