@@ -13,8 +13,24 @@
     <div class="m-2 space-y-2">
       <div class="card p-3 flex flex-col">
         <header class="font-bold">{article.title}</header>
-        <p class="flex-grow">{article.content}</p>
+        <p class="flex-grow overflow-auto">{article.content}</p>
       </div>
     </div>
   {/each}
 </div>
+
+<style>
+  .card {
+    border: 1px solid #8c07b4c5;
+    border-radius: 4px;
+  }
+
+  .flex-grow {
+    overflow: hidden;
+    word-wrap: break-word;
+  }
+
+  .overflow-auto {
+    max-height: 150px; /* Adjust the maximum height as needed */
+  }
+</style>

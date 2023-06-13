@@ -11,13 +11,15 @@
 <AppShell>
 	<svelte:fragment slot="header">
 		<AppBar>
-			<svelte:fragment slot="lead">Jack's Personal Page</svelte:fragment>
+			<svelte:fragment slot="lead">
+				<a href="/">Jack's Personal Page</a>
+			</svelte:fragment>
 			
 			<svelte:fragment slot="default">
 
-					<div class="font-bold p-4 space-x-10">
-						<a href="blog"> Blog </a>
-						<a href="new-post"> Create Post </a>
+					<div class="font-bold p-1 space-x-4">
+						<a href="blog">Blog</a>
+						<a href="new-post">Create Post</a>
 					</div>
 
 				
