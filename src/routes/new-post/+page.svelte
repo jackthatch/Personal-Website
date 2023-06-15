@@ -1,5 +1,4 @@
 
-
 <div class="container h-full mx-auto gap-8 flex flex-col py-4">
     <form action="?/createArticle" method="POST" class="card p-4 flex flex-col gap-3">
         <h1> Title </h1>

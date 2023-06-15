@@ -42,7 +42,12 @@
 	},
 	"type": "module",
 	"dependencies": {
+		"@auth/core": "^0.8.2",
+		"@auth/sveltekit": "^0.3.3",
 		"@prisma/client": "^4.15.0",
-		"prisma": "^4.15.0"
+		"google-auth-library": "^8.8.0",
+		"next-auth": "^4.22.1",
+		"prisma": "^4.15.0",
+		"svelte-spa-router": "^3.3.0"
 	}
 }

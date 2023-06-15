@@ -7,4 +7,5 @@ type Entry = {
     tags: string[];
 };
 
+
 export const noteStore: Writable<Entry[]> = localStorageStore('notes', []);
