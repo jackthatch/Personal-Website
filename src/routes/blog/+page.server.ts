@@ -20,8 +20,7 @@ export const actions: Actions = {
             await prisma.article.create({
                 data: {
                     title,
-                    content,
-                    createdAt: new Date() //Uses the current date to add a timespan to the article
+                    content
                 }
             })
         } catch (err) {

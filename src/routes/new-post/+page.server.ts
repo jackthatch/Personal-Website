@@ -11,6 +11,7 @@ export const load: PageServerLoad = async () => {
 
 export const actions: Actions = {
     createArticle: async ({ request }) => {
+        
         const { title, content } = Object.fromEntries(await request.formData()) as { 
             title: string,
             content: string
@@ -24,6 +25,7 @@ export const actions: Actions = {
                     createdAt: new Date() // Use the current timestamp
                 }
             })
+            
         } catch (err) {
             console.log(err)
             return fail(500, { message: 'Could not create the article'})
