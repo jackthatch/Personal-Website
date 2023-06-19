@@ -13,7 +13,7 @@
   }
 
   .flex-grow {
-    overflow: hidden;
+    flex-grow: 1;
     word-wrap: break-word;
   }
 
@@ -32,12 +32,12 @@
   }
 </style>
 
-<div class='grid grid-cols-2 gap-3 p-24'>
+<div class='grid gap-3 p-24'>
   {#each articles.slice().reverse() as article}
     <div class="m-2 space-y-2">
       <div class="card p-3 flex flex-col">
         <header class="font-bold">{article.title}</header>
-        <p class="flex-grow overflow-auto my-6">{article.content}</p>
+        <p class="flex-grow my-6">{article.content}</p>
         <p class="font-thin">Posted: {article.createdAt}</p>
       </div>
     </div>
