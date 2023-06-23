@@ -31,22 +31,22 @@
 
 		<svelte:fragment slot="lead">
 			{#if !isMobile}
-				<a href="/" class="card p-4 rounded-full">Jack's Page</a>
+				<a href="/" class="card p-4 rounded-full variant-glass-tertiary">Jack's Page</a>
 			{/if}
 		</svelte:fragment>
 		
 		<svelte:fragment slot="default">
 		  {#if !isMobile}
 		  <div class="font-bold p-1 space-x-3">
-			<a href="blog" class="card p-4 rounded-full">Blog</a>
-			<a href="new-post" class="card p-4 rounded-full">Create Post</a>
+			<a href="blog" class="card p-4 rounded-full variant-glass-tertiary">Blog</a>
+			<a href="new-post" class="card p-4 rounded-full variant-glass-tertiary">Create Post</a>
 		  </div>
 		  {/if}
 
 		  {#if isMobile}
 		  <div class="font-bold space-x-1">
-			<a href="blog" class="card p-4 rounded-full">Blog</a>
-			<a href="new-post" class="card p-4 rounded-full">Create Post</a>
+			<a href="blog" class="card p-4 rounded-full variant-glass-tertiary">Blog</a>
+			<a href="new-post" class="card p-4 rounded-full variant-glass-tertiary">Create Post</a>
 			
 		  </div>
 		  {/if}
@@ -55,7 +55,7 @@
 		<svelte:fragment slot="trail">
 		  {#if !isMobile}
 		  <div class="font-bold p-1 space-x-4">
-			<a href="signup" class="card p-4 rounded-full"> Sign Up </a>
+			<a href="signup" class="card p-4 rounded-full variant-glass-tertiary"> Sign Up </a>
 		  </div>
 		  {/if}
 		  <Avatar
