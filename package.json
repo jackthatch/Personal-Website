@@ -45,6 +45,7 @@
 		"@auth/core": "^0.8.2",
 		"@auth/sveltekit": "^0.3.3",
 		"@prisma/client": "^4.15.0",
+		"@supabase/supabase-js": "^2.26.0",
 		"google-auth-library": "^8.8.0",
 		"next-auth": "^4.22.1",
 		"prisma": "^4.15.0",
