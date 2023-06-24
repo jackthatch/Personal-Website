@@ -1,9 +1,30 @@
-<script lang='ts'>
-  import type { PageData } from './$types'
+<script lang="ts">
+  import { onMount } from 'svelte';
+  import { supabase } from '$lib/config/supabaseClient';
 
-  export let data: PageData
+  interface Article {
+    id: number;
+    title: string;
+    content: string;
+    created_at: string;
+  }
 
-  $: ({ articles } = data)  
+  let articles: Article[] = [];
+
+  onMount(async () => {
+    try {
+      const { data, error } = await supabase.from('Articles').select('*');
+
+      if (error) {
+        console.error('Error fetching articles:', error);
+        return;
+      }
+
+      articles = data || [];
+    } catch (err) {
+      console.error('Error fetching articles:', err);
+    }
+  });
 </script>
 
 <style>
@@ -32,13 +53,13 @@
   }
 </style>
 
-<div class='grid gap-3 p-24'>
+<div class="grid gap-3 p-24">
   {#each articles.slice().reverse() as article}
     <div class="m-2 space-y-2">
       <div class="card p-3 flex flex-col">
         <header class="font-bold">{article.title}</header>
         <p class="flex-grow my-6">{article.content}</p>
-        <p class="font-thin">Posted: {article.createdAt}</p>
+        <p class="font-thin">Posted: {article.created_at}</p>
       </div>
     </div>
   {/each}

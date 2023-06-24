@@ -29,7 +29,7 @@
         form.reset();
   
         // Redirect to blog page with the updated articles
-        goto('/sb-test', { state: { articles } });
+        goto('/blog', { state: { articles } });
       } catch (err) {
         console.error('Error creating article:', err);
       }
