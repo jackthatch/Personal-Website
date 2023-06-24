@@ -13,7 +13,7 @@
 
   onMount(async () => {
     try {
-      const { data, error } = await supabase.from('Articles').select('*');
+      const { data, error } = await supabase.from('Articles').select('*').order('id');
 
       if (error) {
         console.error('Error fetching articles:', error);
@@ -54,7 +54,7 @@
 </style>
 
 <div class="grid gap-3 p-24">
-  {#each articles.slice().reverse() as article}
+  {#each articles.reverse() as article (article.id)}
     <div class="m-2 space-y-2">
       <div class="card p-3 flex flex-col">
         <header class="font-bold">{article.title}</header>
