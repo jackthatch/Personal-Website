@@ -40,6 +40,7 @@
 		  <div class="font-bold p-1 space-x-3">
 			<a href="blog" class="card p-4 rounded-full variant-glass-tertiary">Blog</a>
 			<a href="new" class="card p-4 rounded-full variant-glass-tertiary">Create Post</a>
+			<a href="about" class="card p-4 rounded-full variant-glass-tertiary">About</a>
 		  </div>
 		  {/if}
 

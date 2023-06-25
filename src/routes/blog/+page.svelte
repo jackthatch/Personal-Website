@@ -53,14 +53,17 @@
   }
 </style>
 
-<div class="grid gap-3 p-24">
-  {#each articles.reverse() as article (article.id)}
-    <div class="m-2 space-y-2">
-      <div class="card p-3 flex flex-col">
-        <header class="font-bold">{article.title}</header>
-        <p class="flex-grow my-6">{article.content}</p>
-        <p class="font-thin">Posted: {article.created_at}</p>
+<div class="grid gap-3 p-8">
+  <div>
+    {#each articles.reverse() as article (article.id)}
+      <div class="m-8 space-y-2">
+        <div class="card p-3 flex flex-col">
+          <header class="font-bold">{article.title}</header>
+          <p class="flex-grow my-6">{article.content}</p>
+          <p class="font-thin">Posted: {article.created_at}</p>
+        </div>
       </div>
-    </div>
-  {/each}
+    {/each}
+  </div>
+  
 </div>
