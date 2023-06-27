@@ -1,7 +1,8 @@
 <script lang="ts">
     import { supabase } from '$lib/config/supabaseClient';
     import { goto } from '$app/navigation';
-	  import { FileDropzone } from '@skeletonlabs/skeleton';
+    import { FileDropzone } from '@skeletonlabs/skeleton';
+
 
     async function createArticle(event: Event) {
       event.preventDefault();
@@ -41,15 +42,13 @@
     <form on:submit={createArticle} class="card p-4 flex flex-col gap-3">
       <h1> Title </h1>
       <input class="input" type="text" placeholder="Title..." name="title" />
-      <h1> Article Body Test </h1>
-      <textarea name="content" class="textarea h-48" rows="4" placeholder="Enter some long form content."></textarea>
-
+      <h1> Content </h1>
+      <textarea name="content" class="textarea h-64" rows="4" placeholder="Enter some long form content."></textarea>
       
       <div class="items-center text-center">
         <FileDropzone name="files">
           <svelte:fragment slot="lead">
-            <img width="84" height="80" src="https://img.icons8.com/ultraviolet/80/add--v1.png" alt="add--v1"/>
-  
+            <img width="80" height="80" src="https://img.icons8.com/ultraviolet/80/add--v1.png" alt="add--v1"/>
           </svelte:fragment>
           <svelte:fragment slot="message">
             <p> Upload Image </p>
