@@ -2,7 +2,7 @@
 	import '@skeletonlabs/skeleton/themes/theme-skeleton.css';
 	import '@skeletonlabs/skeleton/styles/skeleton.css';
 	import '../app.postcss';
-	import { AppBar, AppShell, Avatar } from '@skeletonlabs/skeleton';
+	import { AppBar, AppShell, Avatar, Modal } from '@skeletonlabs/skeleton';
 	import Icon from '$lib/assets/github-mark.png';
 	import Icon2 from '$lib/assets/1384014.png';
 	import { onMount } from 'svelte';
@@ -25,6 +25,8 @@
 	});
   </script>
   
+  <Modal />
+
   <AppShell>
 	<svelte:fragment slot="header">
 	  <AppBar>
