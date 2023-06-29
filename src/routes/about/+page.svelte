@@ -16,6 +16,20 @@
 		},
 	};
 
+	const modalBlog: ModalSettings = {
+		type: 'confirm',
+		// Data
+		title: 'Personal Blog', 
+		body: 'Would you like to continue to GitHub?',
+		// TRUE if confirm pressed, FALSE if cancel pressed
+		response: (confirmed: boolean) => {
+			if (confirmed) {
+			window.open('https://github.com/jackthatch/skeleton-personal','_blank');
+			}
+		},
+	};
+
+
 	const modalBet: ModalSettings = {
 		type: 'confirm',
 		// Data
@@ -45,12 +59,14 @@
 	async function pythonModal() {
 		modalStore.trigger(modalPy);
 	} 
-
 	async function vaultModal() {
 		modalStore.trigger(modalDVA);
 	} 
 	async function betModal() {
 		modalStore.trigger(modalBet);
+	} 
+	async function blogModal() {
+		modalStore.trigger(modalBlog);
 	} 
 
 </script>
@@ -83,7 +99,7 @@
 			<button on:click={vaultModal} class="btn"> Destiny Vault App </button>
 		</div>
 		<div class="card p-4 h-10 flex justify-center items-center variant-filled-surface opacity-75">
-			<button class="btn"> This Website ! </button>
+			<button on:click={blogModal} class="btn"> This Website ! </button>
 		</div>
 	</div>
 
@@ -116,17 +132,17 @@
 			<button on:click={vaultModal} class="btn"> Destiny Vault Backend & App </button>
 		</div>
 		<div class="card p-4 h-10 flex justify-center items-center variant-filled-surface opacity-75">
-			<button class="btn"> This Website ! </button>
+			<button on:click={blogModal} class="btn"> This Website ! </button>
 		</div>
 	</div>
 
-	<div class='card p-4 text-center my-8 flex items-center justify-center w-full max-w-screen-lg mx-auto variant-ghost-tertiary'>
+	<div class='card p-4 text-center my-8 flex flex-wrap items-center justify-center w-full max-w-screen-lg mx-auto variant-ghost-tertiary overflow'>
 		<h1 class="p-4"> Tools and Other: </h1>
-		<img class='w-48 h-48 p-4' src="https://xcdezfzlpwnkrukbaxsi.supabase.co/storage/v1/object/public/Images/supabase.jpg" alt="Supabase-Logo">
-		<img class='w-48 h-48 p-4' src="https://xcdezfzlpwnkrukbaxsi.supabase.co/storage/v1/object/public/Images/git.png" alt="Git-Logo">
-		<img class='w-48 h-48 p-4' src="https://xcdezfzlpwnkrukbaxsi.supabase.co/storage/v1/object/public/Images/nvim.png" alt="Git-Logo">
-		<img class='w-48 h-48 p-4' src="https://xcdezfzlpwnkrukbaxsi.supabase.co/storage/v1/object/public/Images/vercel.jpg" alt="Vercel-Logo">
-		<img class='w-48 h-48 p-4' src="https://xcdezfzlpwnkrukbaxsi.supabase.co/storage/v1/object/public/Images/arch1.png" alt="Arch-Logo">
+		<img class='w-36 h-36 p-4' src="https://xcdezfzlpwnkrukbaxsi.supabase.co/storage/v1/object/public/Images/supabase.jpg" alt="Supabase-Logo">
+		<img class='w-36 h-36 p-4' src="https://xcdezfzlpwnkrukbaxsi.supabase.co/storage/v1/object/public/Images/git.png" alt="Git-Logo">
+		<img class='w-36 h-36 p-4' src="https://xcdezfzlpwnkrukbaxsi.supabase.co/storage/v1/object/public/Images/nvim.png" alt="Git-Logo">
+		<img class='w-36 h-36 p-4' src="https://xcdezfzlpwnkrukbaxsi.supabase.co/storage/v1/object/public/Images/vercel.jpg" alt="Vercel-Logo">
+		<img class='w-36 h-36 p-4' src="https://xcdezfzlpwnkrukbaxsi.supabase.co/storage/v1/object/public/Images/arch1.png" alt="Arch-Logo">
 	</div>
 	
 

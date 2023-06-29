@@ -53,7 +53,7 @@
   }
 </style>
 
-<div class="grid gap-3 p-8">
+<div class="grid gap-3 p-8 bg-">
   <div>
     {#each articles.reverse() as article (article.id)}
       <div class="m-8 space-y-2">
