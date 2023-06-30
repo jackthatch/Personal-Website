@@ -38,7 +38,7 @@
 		// TRUE if confirm pressed, FALSE if cancel pressed
 		response: (confirmed: boolean) => {
 			if (confirmed) {
-			window.open('https://github.com/jackthatch/d2_vault_project/tree/master','_blank');
+			window.open('https://github.com/jackthatch/DGF-Bot/tree/main/DGF%20Program','_blank');
 			}
 		},
 	};
