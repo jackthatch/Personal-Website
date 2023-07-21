@@ -56,6 +56,19 @@
 		},
 	};
 
+	const modalBhop: ModalSettings = {
+		type: 'confirm',
+		// Data
+		title: 'Bunnyhopping Tool',
+		body: 'This is a tool for the video game Counter Strike: Source. The tool helps players by providing data about their performance in game. Currently the tool prints the players speed each time they jump. <br><br><br> Would you like to continue to GitHub?',
+		// TRUE if confirm pressed, FALSE if cancel pressed
+		response: (confirmed: boolean) => {
+			if (confirmed) {
+			window.open('https://github.com/jackthatch/source-ssj','_blank');
+			}
+		},
+	};
+
 	async function pythonModal() {
 		modalStore.trigger(modalPy);
 	} 
@@ -68,6 +81,10 @@
 	async function blogModal() {
 		modalStore.trigger(modalBlog);
 	} 
+
+	async function bhopModal() {
+		modalStore.trigger(modalBhop);
+	}
 
 </script>
 
@@ -117,6 +134,9 @@
 		<div class="flex items-center justify-center">
 		  <h1 class="mx-4">C++</h1>
 		  <img class='w-24 h-24' src='https://xcdezfzlpwnkrukbaxsi.supabase.co/storage/v1/object/public/Images/c++.png' alt='C++-Icon'>
+		</div>
+		<div class="card p-4 h-10 flex justify-center items-center variant-filled-surface opacity-75 my-3">
+			<button on:click={bhopModal} class="btn"> Bunnyhopping SSJ Tool </button>
 		</div>
 		<div class="card p-4 h-10 flex justify-center items-center variant-filled-surface opacity-75 my-3">
 			<button class="btn"> University Studies </button>
