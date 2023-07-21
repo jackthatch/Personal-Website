@@ -37,7 +37,7 @@
     }
   </script>
   
-  <div class="container h-full mx-auto gap-8 flex flex-col py-4">
+  <div class="container h-1/2 mx-auto gap-8 flex flex-col py-4">
     <form on:submit={createArticle} class="card p-4 flex flex-col gap-3">
       <h1> Title </h1>
       <input class="input" type="text" placeholder="Title..." name="title" />
@@ -45,18 +45,22 @@
       <textarea name="content" class="textarea h-96" rows="4" placeholder="Enter some long form content."></textarea>
 
       
-      <div>
+      <!-- <div>
         <h1 class="my-3"> Add Image </h1>
-        <FileDropzone name="files">
-          <svelte:fragment slot="lead">
-            <img width="84" height="80" src="https://img.icons8.com/ultraviolet/80/add--v1.png" alt="add--v1"/>
-  
-          </svelte:fragment>
-          <svelte:fragment slot="message">
-            <p> Upload Image </p>
-          </svelte:fragment>        
-      </FileDropzone>
-      </div>
+
+        <div class='h-12'>
+          <FileDropzone name="files">
+            <svelte:fragment slot="lead">
+              <img width="84" height="80" src="https://img.icons8.com/ultraviolet/80/add--v1.png" alt="add--v1"/>
+    
+            </svelte:fragment>
+            <svelte:fragment slot="message">
+              <p> Upload Image </p>
+            </svelte:fragment>        
+          </FileDropzone>
+        </div>
+        
+      </div> -->
 
 
 
