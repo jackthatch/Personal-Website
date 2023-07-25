@@ -90,7 +90,33 @@
 
 <main class="p-4">
 
-	<div class="text-center my-4">
+<div class='card p-4 text-center my-2 w-full max-w-screen-lg mx-auto variant-ghost-tertiary'>
+
+	<h1 class="font-bold mb-4">
+		About Myself
+	</h1>
+		
+	<p>
+		Greetings! I'm Jackson Thatcher, a passionate Sophomore Computer Science student at The University of Alabama in Huntsville. My main focus in university lies in mastering C++
+		and delving into low-level programming. However, during my free time, I've taken the initiative to expand my skill set by learning TypeScript and SvelteKit to build impressive web apps. 
+		Additionally, I've been sharpening my C++ skills by creating video game plugins for the game Counter Strike: Source. I'm also very interested in learning System Design and DevOps skills and have been reading about these topics on roadmap.sh.  <br><br>
+
+		I'm actively seeking internships in the Huntsville, AL area, but I'm open to the idea of relocation or hybrid work arrangements. My enthusiasm for programming goes beyond academics, as I also engage in freelance work.
+		If you're in need of a talented individual to build and maintain your website, feel free to reach out to me through one of my social media platforms (linked below) or via email at jthatcher128@gmail.com.
+
+
+
+		<!-- Hello! My name is Jackson Thatcher and I'm a Sophomore Computer Science student and The University of Alabama in Huntsville. 
+		My current University studies revolve mostly around C++ and low-level programming. In my free time I've been
+		learning TypeScript and SvelteKit for building web apps, as well as applying my C++ skills by building video game plugins.
+		I am a self-driven and passionate programmer currently looking for internships in the Huntsville, AL area. I am also interested in relocation or hybrid work.
+		I also do free-lance work, if you are looking for someone to build and maintain your website please reach out to one of my socials linked at the bottom or by email
+		at jthatcher128@gmail.com. My software interests are in System Design and DevOps but open to work in any field. -->
+	</p>
+
+	</div>
+
+	<div class="text-center font-bold mb-4">
 		<h1> Currently Working With: </h1>
 	</div>	
 
