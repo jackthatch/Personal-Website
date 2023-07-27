@@ -69,7 +69,7 @@
 		  {/if}
 
 		  {#if isMobile}
-		  <div class="font-bold space-x-1">
+		  <div class="font-bold space-x-1 flex grid-cols-3">
 			<!-- <a href="blog" class="card p-4 rounded-full variant-glass-tertiary">Blog</a>
 			<a href="new" class="card p-4 rounded-full variant-glass-tertiary">Create Post</a>
 			<a href="about" class="card p-4 rounded-full variant-glass-tertiary">About</a>
@@ -83,6 +83,9 @@
 					</svg>
 				</span>
 			</button>
+
+			<h1 class="p-4">jthatcher.dev</h1>
+
 		  </div>
 		  {/if}
 		</svelte:fragment>
