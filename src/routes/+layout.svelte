@@ -62,9 +62,9 @@
 		<svelte:fragment slot="default">
 		  {#if !isMobile}
 		  <div class="font-bold p-1 space-x-12">
+			<a href="about" class="">About</a>
 			<a href="blog" class="ml-4 ">Blog</a>
 			<a href="new" class="">Create Post</a>
-			<a href="about" class="">About</a>
 		  </div>
 		  {/if}
 
