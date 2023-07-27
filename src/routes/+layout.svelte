@@ -28,7 +28,7 @@
 	});
 
 	const drawerSettings: DrawerSettings = {
-		bgDrawer: 'bg-blue-700 text-white',
+		bgDrawer: 'bg-gray-700 text-white',
 		bgBackdrop: 'bg-gradient-to-tr from-blue-500/75 via-white-500/50 to-red-500/25',
 		width: 'w-[280px] md:w-[480px]',
 		padding: 'p-4',
@@ -60,13 +60,16 @@
 		</svelte:fragment>
 		
 		<svelte:fragment slot="default">
-		  {#if !isMobile}
-		  <div class="font-bold p-1 space-x-12">
-			<a href="about" class="ml-4">About</a>
-			<a href="blog" class="">Blog</a>
-			<a href="new" class="">Create Post</a>
-		  </div>
-		  {/if}
+
+			{#if !isMobile}
+			<div class="center-container">
+			  <div class="font-bold p-1 space-x-16">
+				<a href="about" class="ml-4">About</a>
+				<a href="blog" class="">Blog</a>
+				<a href="new" class="">Create Post</a>
+			  </div>
+			</div>
+			{/if}
 
 		  {#if isMobile}
 		  <div class="font-bold space-x-1 flex grid-cols-3">
@@ -142,4 +145,9 @@
 	  justify-content: center;
 	}
 	
+	.center-container {
+    display: flex;
+    justify-content: center; /* Horizontally center the child element */
+    align-items: center; /* Vertically center the child element */
+  }
   </style>
