@@ -1,12 +1,14 @@
 <script lang='ts'>
 	import '../theme.postcss';
+	// import '@skeletonlabs/skeleton/themes/theme-gold-nouveau.css';
 	import '@skeletonlabs/skeleton/styles/skeleton.css';
 	import '../app.postcss';
-	import { AppBar, AppShell, Avatar, Drawer, Modal, drawerStore } from '@skeletonlabs/skeleton';
+	import { AppBar, AppShell, Avatar, Drawer, Modal, drawerStore, type DrawerSettings } from '@skeletonlabs/skeleton';
 	import Icon from '$lib/assets/github-mark.png';
 	import Icon2 from '$lib/assets/1384014.png';
 	import { onMount } from 'svelte';
 	import Navigation from '$lib/Navigation.svelte';
+	import { LightSwitch } from '@skeletonlabs/skeleton';
   
 	let isMobile = false;
   
@@ -25,9 +27,18 @@
 	  };
 	});
 
+	const drawerSettings: DrawerSettings = {
+		bgDrawer: 'bg-blue-700 text-white',
+		bgBackdrop: 'bg-gradient-to-tr from-blue-500/75 via-white-500/50 to-red-500/25',
+		width: 'w-[280px] md:w-[480px]',
+		padding: 'p-4',
+		rounded: 'rounded-xl',
+		position: 'bottom',
+
+	};
 
 	async function openDrawer() {
-		drawerStore.open();
+		drawerStore.open(drawerSettings);
 	}
 
   </script>
@@ -82,6 +93,7 @@
 			<a href="signup" class="card p-4 rounded-full variant-glass-tertiary"> Sign Up </a>
 		  </div> -->
 		  {/if}
+		  <LightSwitch />
 		  <Avatar
 			border="border-4 border-surface-300-600-token hover:!border-primary-500"
 			cursor="cursor-pointer"

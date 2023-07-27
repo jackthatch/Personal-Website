@@ -11,6 +11,7 @@
 
 <nav class='list-nav p-8'>
     <ul>
+        <li><a href="/" on:click={drawerClose}>Home</a></li>
         <li><a href="/about" on:click={drawerClose}>About</a></li>
         <li><a href="/blog" on:click={drawerClose}>Blog</a></li>
         <li><a href="/new" on:click={drawerClose}>Create Post</a></li>
