@@ -64,7 +64,7 @@
 
 
 
-      <button type="submit" class="btn variant-ghost-primary self-end"> Create Entry </button>
+      <button type="submit" class="btn variant-ghost-surface self-end"> Create Entry </button>
     </form>
   </div>
   

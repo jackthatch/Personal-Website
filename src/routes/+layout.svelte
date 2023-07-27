@@ -62,8 +62,8 @@
 		<svelte:fragment slot="default">
 		  {#if !isMobile}
 		  <div class="font-bold p-1 space-x-12">
-			<a href="about" class="">About</a>
-			<a href="blog" class="ml-4 ">Blog</a>
+			<a href="about" class="ml-4">About</a>
+			<a href="blog" class="">Blog</a>
 			<a href="new" class="">Create Post</a>
 		  </div>
 		  {/if}
@@ -110,22 +110,20 @@
 	<!-- ---- / ---- -->
   
 	<svelte:fragment slot='pageFooter'>
-	  <div class="logo-cloud grid-cols-1 lg:!grid-cols-2 gap-1">
-		{#if !isMobile}
-		<a class="logo-item" href="gh-redirect">
+	  <div class="logo-cloud grid-cols-2 lg:!grid-cols-2 gap-1">
+		<a class="logo-item variant-glass-tertiary" href="gh-redirect">
 		  <span>
 			<img class='github-icon' src={Icon} alt="Github Icon" style="filter: invert(70%) sepia(100%) saturate(200%) hue-rotate(180deg);" />
 		  </span>
-		  <span>Github</span>
+		  <span class="font-thin">Github</span>
 		</a>
   
-		<a class="logo-item" href="li-redirect">
+		<a class="logo-item variant-glass-tertiary" href="li-redirect">
 		  <span>
 			<img class='github-icon' src={Icon2} alt="Github Icon" style="filter: invert(70%) sepia(100%) saturate(200%) hue-rotate(180deg);" />
 		  </span>
-		  <span>LinkedIn</span>
+		  <span class="font-thin">LinkedIn</span>
 		</a>
-		{/if}
 	  </div>
 	</svelte:fragment>
 	<!-- (footer) -->
