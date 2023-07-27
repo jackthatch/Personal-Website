@@ -55,7 +55,7 @@
 
 		<svelte:fragment slot="lead">
 			{#if !isMobile}
-				<a href="/" class="card p-4 rounded-full variant-glass-tertiary font-bold">Jack's Page</a>
+				<a href="/" class="card p-4 rounded-full variant-glass-tertiary font-bold">jthatcher.dev</a>
 			{/if}
 		</svelte:fragment>
 		
