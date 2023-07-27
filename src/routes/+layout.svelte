@@ -2,10 +2,11 @@
 	import '../theme.postcss';
 	import '@skeletonlabs/skeleton/styles/skeleton.css';
 	import '../app.postcss';
-	import { AppBar, AppShell, Avatar, Modal } from '@skeletonlabs/skeleton';
+	import { AppBar, AppShell, Avatar, Drawer, Modal, drawerStore } from '@skeletonlabs/skeleton';
 	import Icon from '$lib/assets/github-mark.png';
 	import Icon2 from '$lib/assets/1384014.png';
 	import { onMount } from 'svelte';
+	import Navigation from '$lib/Navigation.svelte';
   
 	let isMobile = false;
   
@@ -23,9 +24,19 @@
 		mediaQuery.removeListener(updateIsMobile);
 	  };
 	});
+
+
+	async function openDrawer() {
+		drawerStore.open();
+	}
+
   </script>
   
   <Modal />
+
+<Drawer>
+	<Navigation />
+</Drawer>
 
   <AppShell>
 	<svelte:fragment slot="header">
@@ -33,34 +44,43 @@
 
 		<svelte:fragment slot="lead">
 			{#if !isMobile}
-				<a href="/" class="card p-4 rounded-full variant-glass-tertiary">Jack's Page</a>
+				<a href="/" class="card p-4 rounded-full variant-glass-tertiary font-bold">Jack's Page</a>
 			{/if}
 		</svelte:fragment>
 		
 		<svelte:fragment slot="default">
 		  {#if !isMobile}
-		  <div class="font-bold p-1 space-x-3">
-			<a href="blog" class="card p-4 rounded-full variant-glass-tertiary">Blog</a>
-			<a href="new" class="card p-4 rounded-full variant-glass-tertiary">Create Post</a>
-			<a href="about" class="card p-4 rounded-full variant-glass-tertiary">About</a>
+		  <div class="font-bold p-1 space-x-12">
+			<a href="blog" class="ml-4 ">Blog</a>
+			<a href="new" class="">Create Post</a>
+			<a href="about" class="">About</a>
 		  </div>
 		  {/if}
 
 		  {#if isMobile}
 		  <div class="font-bold space-x-1">
-			<a href="blog" class="card p-4 rounded-full variant-glass-tertiary">Blog</a>
+			<!-- <a href="blog" class="card p-4 rounded-full variant-glass-tertiary">Blog</a>
 			<a href="new" class="card p-4 rounded-full variant-glass-tertiary">Create Post</a>
 			<a href="about" class="card p-4 rounded-full variant-glass-tertiary">About</a>
-			
+			 -->
+			 <button on:click={openDrawer}>
+				<span class="">
+					<svg viewBox="0 0 100 80" class="fill-token w-4 h-4">
+					<rect width="100" height="20" />
+					<rect y="30" width="100" height="20" />
+					<rect y="60" width="100" height="20" />
+					</svg>
+				</span>
+			</button>
 		  </div>
 		  {/if}
 		</svelte:fragment>
 		
 		<svelte:fragment slot="trail">
 		  {#if !isMobile}
-		  <div class="font-bold p-1 space-x-4">
+		  <!-- <div class="font-bold p-1 space-x-4">
 			<a href="signup" class="card p-4 rounded-full variant-glass-tertiary"> Sign Up </a>
-		  </div>
+		  </div> -->
 		  {/if}
 		  <Avatar
 			border="border-4 border-surface-300-600-token hover:!border-primary-500"

@@ -52,12 +52,13 @@
     }
   }
 </style>
+  
+<main>
 
-<div class="grid gap-3 p-8 bg-">
   <div>
     {#each articles.reverse() as article (article.id)}
       <div class="m-8 space-y-2">
-        <div class="card p-3 flex flex-col">
+        <div class="card p-4 my-2 w-full max-w-screen-lg mx-auto variant-ghost-tertiary">
           <header class="font-bold">{article.title}</header>
           <p class="flex-grow my-6">{article.content}</p>
           <p class="font-thin">Posted: {article.created_at}</p>
@@ -65,5 +66,5 @@
       </div>
     {/each}
   </div>
-  
-</div>
+
+</main>
