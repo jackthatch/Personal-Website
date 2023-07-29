@@ -97,9 +97,9 @@
 	</h1>
 		
 	<p>
-		Greetings! I'm Jackson Thatcher, a passionate Sophomore Computer Science student at The University of Alabama in Huntsville. My main focus in university lies in mastering C++
+		Hello ! My name is Jackson Thatcher, I'm a passionate Sophomore Computer Science student at The University of Alabama in Huntsville. My main focus in university lies in mastering C++
 		and delving into low-level programming. However, during my free time, I've taken the initiative to expand my skill set by learning TypeScript and SvelteKit to build impressive web apps. 
-		Additionally, I've been sharpening my C++ skills by creating video game plugins for the game Counter Strike: Source. I'm also very interested in learning System Design and DevOps. <br><br>
+		Additionally, I've been sharpening my C++ skills by creating video game plugins for the game Counter Strike: Source. I'm also very interested in learning System Design and DevOps.<br><br>
 
 		I'm actively seeking internships in the Huntsville, AL area, but I'm open to the idea of relocation or hybrid work arrangements. My enthusiasm for programming goes beyond academics, as I also engage in freelance work.
 		If you're in need of a talented individual to build and maintain your website, feel free to reach out to me through one of my social media platforms (linked below) or via email at jthatcher128@gmail.com.
