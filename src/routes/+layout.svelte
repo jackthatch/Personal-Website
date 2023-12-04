@@ -95,11 +95,10 @@
 		
 		<svelte:fragment slot="trail">
 		  {#if !isMobile}
-		  <!-- <div class="font-bold p-1 space-x-4">
-			<a href="signup" class="card p-4 rounded-full variant-glass-tertiary"> Sign Up </a>
-		  </div> -->
+		  	<a href="/signup" class="btn variant-glass-tertiary"> Sign Up </a>
 		  {/if}
 		  <LightSwitch />
+		  
 		  <a href="signup">
 			<Avatar
 			border="border-4 border-surface-300-600-token hover:!border-primary-500"

@@ -90,20 +90,11 @@
 </script>
 
 
-<main>
-
-	<div class="container mx-auto flex justify-center my-10">
-
-		<h1> Signup Under Construction</h1>
-		
-	
-	</div>
-	
-	
+<main>	
 	
 	<div class="container mx-auto flex justify-center my-10">
 	
-			<form on:submit={createUser} class="card p-4 flex flex-col gap-3 w-1/2">
+			<form on:submit={createUser} class="card p-4 flex flex-col gap-3 w-3/4">
 
 				<h1> Email </h1>
 				<input class="input" type="text" placeholder="Email" name="email" />
@@ -112,8 +103,11 @@
 				<h1> Password </h1>
 				<input class="input" type="text" placeholder="Password" name="password" />
 	
-				<button type="submit" class="btn variant-ghost-surface self-center my-4"> Create User </button>
-			</form>
+				<button type="submit" class="btn variant-filled-primary self-center my-2"> Create User </button>
+			
+        		<a href="/login" class="btn variant-ghost-surface self-center"> Already Have and Account? </a> 
+
+      </form>
 			
 	
 	</div>

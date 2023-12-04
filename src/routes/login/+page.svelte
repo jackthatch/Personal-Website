@@ -1,4 +1,6 @@
 <script lang='ts'>
+	import { goto } from '$app/navigation';
+
 
     import { supabase } from '$lib/config/supabaseClient';
 	import { Modal, modalStore } from '@skeletonlabs/skeleton';
@@ -49,6 +51,7 @@
 
             if (error) {
                 loggedFailModal();
+                form.reset();
                 throw error;
             }
 
@@ -57,6 +60,7 @@
                 loggedInModal();
                 sessionStorage.setItem('username', username);
                 sessionStorage.setItem('password', password);
+                form.reset();
             } 
 
         } catch (error) {
@@ -76,7 +80,7 @@
             <h1> Password </h1>
             <input class="input" type="text" placeholder="Password" name="password" />
 
-            <button type="submit" class="btn variant-ghost-surface self-center my-4"> Login </button>
+            <button type="submit" class="btn variant-filled-primary self-center my-4"> Login </button>
         </form>
         
 
