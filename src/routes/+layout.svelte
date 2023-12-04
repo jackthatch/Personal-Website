@@ -100,11 +100,14 @@
 		  </div> -->
 		  {/if}
 		  <LightSwitch />
-		  <Avatar
+		  <a href="signup">
+			<Avatar
 			border="border-4 border-surface-300-600-token hover:!border-primary-500"
 			cursor="cursor-pointer"
 			initials="JT"
-		  />
+			/>
+		  </a>
+		  
 		</svelte:fragment>
 	  </AppBar>
 	</svelte:fragment>
