@@ -1,5 +1,29 @@
 <script lang='ts'>
 
+    import { supabase } from '$lib/config/supabaseClient';
+	import { Modal, modalStore } from '@skeletonlabs/skeleton';
+	import type { ModalSettings, ModalComponent } from '@skeletonlabs/skeleton';
+    
+    const modalLogin: ModalSettings = {
+		type: 'confirm',
+		title: 'Success',
+		body: 'You are now logged in!'
+	}
+
+	async function loggedInModal(){
+		modalStore.trigger(modalLogin);
+	}
+
+    const modalLoginFail: ModalSettings = {
+		type: 'alert',
+		title: 'Failure',
+		body: 'Failure to login, please check username and password.'
+	}
+
+	async function loggedFailModal(){
+		modalStore.trigger(modalLoginFail);
+	}
+
     async function loginUser(event: Event) {
         event.preventDefault();
         const form = event.target as HTMLFormElement;
@@ -8,7 +32,36 @@
         const username = formData.get('username') as string;
         const password = formData.get('password') as string;
 
+        try {
+            
 
+            if (!username || !password) {
+                console.error('Username and password are required.');
+                return;
+            }
+
+            const { data, error } = await supabase
+                .from('Users')
+                .select('username, password')
+                .eq('username', username)
+                .eq('password', password)
+                .single();
+
+            if (error) {
+                loggedFailModal();
+                throw error;
+            }
+
+            if (data) {
+                console.log('Login successful!');
+                loggedInModal();
+                sessionStorage.setItem('username', username);
+                sessionStorage.setItem('password', password);
+            } 
+
+        } catch (error) {
+            console.error('Error checking credentials:', error);
+        }
     }
 
 </script>
