@@ -2,8 +2,37 @@
     import { supabase } from '$lib/config/supabaseClient';
     import { goto } from '$app/navigation';
 	  import { FileDropzone } from '@skeletonlabs/skeleton';
+    import { Modal, modalStore } from '@skeletonlabs/skeleton';
+	  import type { ModalSettings, ModalComponent } from '@skeletonlabs/skeleton';
+    
+    const modalMissingUsername: ModalSettings = {
+      type: 'alert',
+      title: 'Not Logged In',
+      body: 'Please login or singup before creating a post.'
+    }
+
+    async function modalNotLoggedIn(){
+      modalStore.trigger(modalMissingUsername);
+    }
+
+    async function loggedInTF() {
+      if (sessionStorage.getItem('username')) {
+        const userData = sessionStorage.getItem('username');
+        return userData
+      } else {
+        modalNotLoggedIn();
+        return null
+      }
+    }
 
     async function createArticle(event: Event) {
+
+      const user = await loggedInTF() as string;
+
+      if (user === null) {
+        return;
+      }
+
       event.preventDefault();
   
       const form = event.target as HTMLFormElement;
@@ -11,10 +40,10 @@
   
       const title = formData.get('title') as string;
       const content = formData.get('content') as string;
-  
+      
       try {
         // Create the new article
-        const { data, error } = await supabase.from('Articles').insert([{ title, content }]);
+        const { data, error } = await supabase.from('Articles').insert([{ title, content, user }]);
   
         if (error) {
           console.error('Error creating article:', error);

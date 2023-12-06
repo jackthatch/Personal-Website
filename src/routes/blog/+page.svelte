@@ -7,6 +7,7 @@
     title: string;
     content: string;
     created_at: string;
+    user: string
   }
 
   let articles: Article[] = [];
@@ -60,8 +61,10 @@
       <div class="m-8 space-y-2">
         <div class="card p-4 my-2 w-full max-w-screen-lg mx-auto variant-ghost-tertiary">
           <header class="font-bold">{article.title}</header>
-          <p class="flex-grow my-6">{article.content}</p>
+          <p class="flex-grow my-4">{article.content}</p>
+          <p class="">User: {article.user}</p>
           <p class="font-thin">Posted: {article.created_at}</p>
+          
         </div>
       </div>
     {/each}
