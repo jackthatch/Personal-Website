@@ -148,8 +148,8 @@
 	}
 	
 	.center-container {
-    display: flex;
-    justify-content: center; /* Horizontally center the child element */
-    align-items: center; /* Vertically center the child element */
-  }
+    	display: flex;
+    	justify-content: center; /* Horizontally center the child element */
+    	align-items: center; /* Vertically center the child element */
+  	}
   </style>

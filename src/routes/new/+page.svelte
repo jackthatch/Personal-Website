@@ -2,8 +2,8 @@
     import { supabase } from '$lib/config/supabaseClient';
     import { goto } from '$app/navigation';
 	  import { FileDropzone } from '@skeletonlabs/skeleton';
-    import { Modal, modalStore } from '@skeletonlabs/skeleton';
-	  import type { ModalSettings, ModalComponent } from '@skeletonlabs/skeleton';
+    import { modalStore } from '@skeletonlabs/skeleton';
+	  import type { ModalSettings } from '@skeletonlabs/skeleton';
     
     const modalMissingUsername: ModalSettings = {
       type: 'alert',
